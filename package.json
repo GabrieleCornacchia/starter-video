@@ -1,0 +1,31 @@
+{
+  "name": "starter-video",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "remotion studio src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "render:16x9": "remotion render src/index.ts Spot-16x9 out/spot-16x9.mp4",
+    "render:9x16": "remotion render src/index.ts Spot-9x16 out/spot-9x16.mp4",
+    "render:1x1": "remotion render src/index.ts Spot-1x1 out/spot-1x1.mp4",
+    "render:tutti": "npm run render:16x9 && npm run render:9x16 && npm run render:1x1",
+    "copertina": "remotion still src/index.ts Copertina out/copertina.png"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.529",
+    "@remotion/google-fonts": "4.0.529",
+    "@remotion/media": "4.0.529",
+    "@remotion/transitions": "4.0.529",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.529",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
